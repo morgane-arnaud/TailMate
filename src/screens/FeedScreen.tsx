@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
-import { CardStack, type CardStackRef } from '@/components';
+import CardStack, { type CardStackRef } from '@/components/CardStack';
 import { LAYOUT } from '@/constants';
 import { THEME } from '@/theme';
 import {
@@ -243,6 +243,7 @@ const styles = StyleSheet.create({
     backgroundColor: THEME.colors.background.secondary,
     justifyContent: 'space-between',
     alignItems: 'center',
+    marginBottom: 40,
   },
   centerContent: {
     justifyContent: 'center',
@@ -277,7 +278,7 @@ const styles = StyleSheet.create({
     marginBottom: LAYOUT.PADDING.XXL,
     gap: 40,
     position: 'absolute',
-    bottom: 100,
+    bottom: 80,
     left: 0,
     right: 0,
   },
