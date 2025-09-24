@@ -29,13 +29,19 @@ src/
    npm install
    ```
 
-2. Start the development server:
+2. Set up The Cat API:
+
+   - Get your API key from [The Cat API](https://developers.thecatapi.com/view-account/ylX4blBYT9FaoVd6OhvR?report=FJkYOq9tW)
+   - Create a `.env` file in the root directory
+   - Add your API key: `CAT_API_KEY=your_api_key_here`
+
+3. Start the development server:
 
    ```bash
    npm start
    ```
 
-3. Run on specific platforms:
+4. Run on specific platforms:
    - iOS: `npm run ios`
    - Android: `npm run android`
    - Web: `npm run web`
@@ -62,4 +68,6 @@ This project uses TypeScript and follows a modular structure. Each folder in `sr
 - React Native
 - Expo
 - TypeScript
-- React Navigation (to be added)
+- React Navigation
+- Redux Toolkit (RTK Query)
+- The Cat API
