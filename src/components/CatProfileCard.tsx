@@ -10,7 +10,7 @@ interface CatProfileCardProps {
   imageUri: string;
 }
 
-export default function CatProfileCard({
+const CatProfileCard = React.memo(function CatProfileCard({
   breed,
   location,
   number,
@@ -28,7 +28,9 @@ export default function CatProfileCard({
       </View>
     </View>
   );
-}
+});
+
+export default CatProfileCard;
 
 const styles = StyleSheet.create({
   container: {
@@ -43,6 +45,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     resizeMode: 'cover',
+    backgroundColor: THEME.colors.background.secondary,
   },
   overlay: {
     position: 'absolute',

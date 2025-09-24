@@ -41,4 +41,5 @@ export const catApi = createApi({
   }),
 });
 
-export const { useGetCatsQuery, useVoteForCatMutation } = catApi;
+export const { useGetCatsQuery, useLazyGetCatsQuery, useVoteForCatMutation } =
+  catApi;
