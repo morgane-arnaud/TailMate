@@ -78,6 +78,7 @@ export const THEME = {
       primary: COLORS.WHITE,
       secondary: COLORS.NEUTRAL[50],
       tertiary: COLORS.NEUTRAL[100],
+      layout: '#F6F5FC',
     },
 
     // Text colors
@@ -90,7 +91,7 @@ export const THEME = {
 
     // Brand colors
     brand: {
-      primary: COLORS.PRIMARY[500],
+      primary: '#EC537E',
       secondary: COLORS.SECONDARY[500],
       accent: COLORS.SECONDARY[400],
     },

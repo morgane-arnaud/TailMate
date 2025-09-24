@@ -1,7 +1,9 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Text } from 'react-native';
-import { FeedScreen, ProfileScreen, ChatsScreen } from '@/screens';
+import FeedScreen from '@/screens/FeedScreen';
+import ProfileScreen from '@/screens/ProfileScreen';
+import ChatsScreen from '@/screens/ChatsScreen';
 import { THEME } from '@/theme';
 import { LAYOUT } from '@/constants';
 
@@ -15,19 +17,19 @@ export default function BottomTabNavigator() {
         tabBarStyle: {
           backgroundColor: THEME.colors.background.primary,
           borderTopWidth: 0,
-          paddingBottom: LAYOUT.PADDING.SM,
-          paddingTop: LAYOUT.PADDING.SM,
-          height: 70,
-          borderRadius: 0,
-          elevation: 0,
-          shadowOpacity: 0,
+          paddingHorizontal: LAYOUT.PADDING.SM,
+          height: 60,
+          borderRadius: 20,
+          elevation: 9,
+          shadowOpacity: 0.1,
+          position: 'absolute',
+          bottom: 40,
+          left: 45,
+          right: 45,
+          marginHorizontal: 45,
         },
-        tabBarActiveTintColor: THEME.colors.brand.secondary, // Warm color for active tab
-        tabBarInactiveTintColor: THEME.colors.text.secondary, // Secondary text color for inactive tabs
-        tabBarLabelStyle: {
-          fontSize: 0, // Hide labels
-          display: 'none',
-        },
+        tabBarActiveTintColor: THEME.colors.brand.primary,
+        tabBarInactiveTintColor: THEME.colors.text.secondary,
         tabBarIconStyle: {
           marginTop: LAYOUT.SPACING.XS,
         },
@@ -37,8 +39,8 @@ export default function BottomTabNavigator() {
         name='Feed'
         component={FeedScreen}
         options={{
-          tabBarIcon: ({ color, size, focused }) => (
-            <TabIcon name='paw' color={color} size={28} focused={focused} />
+          tabBarIcon: ({ color, focused }) => (
+            <TabIcon name='paw' color={color} size={20} focused={focused} />
           ),
         }}
       />
@@ -46,8 +48,8 @@ export default function BottomTabNavigator() {
         name='Chats'
         component={ChatsScreen}
         options={{
-          tabBarIcon: ({ color, size, focused }) => (
-            <TabIcon name='chat' color={color} size={28} focused={focused} />
+          tabBarIcon: ({ color, focused }) => (
+            <TabIcon name='chat' color={color} size={20} focused={focused} />
           ),
         }}
       />
@@ -55,8 +57,8 @@ export default function BottomTabNavigator() {
         name='Profile'
         component={ProfileScreen}
         options={{
-          tabBarIcon: ({ color, size, focused }) => (
-            <TabIcon name='person' color={color} size={28} focused={focused} />
+          tabBarIcon: ({ color, focused }) => (
+            <TabIcon name='person' color={color} size={20} focused={focused} />
           ),
         }}
       />
@@ -69,7 +71,6 @@ function TabIcon({
   name,
   color,
   size,
-  focused,
 }: {
   name: string;
   color: string;

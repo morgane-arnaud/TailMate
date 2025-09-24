@@ -9,9 +9,7 @@ export const LAYOUT = {
   SCREEN_HEIGHT: screenHeight,
 
   // Card dimensions
-  CARD_MARGIN: 20,
   CARD_WIDTH: screenWidth - 40, // 20px margin on each side
-  CARD_ASPECT_RATIO: 1.2, // 5:6 aspect ratio
   CARD_HEIGHT: (screenWidth - 40) * 1.2,
 
   // Border radius
@@ -62,11 +60,6 @@ export const TYPOGRAPHY = {
     SEMIBOLD: '600' as const,
     BOLD: '700' as const,
   },
-  LINE_HEIGHTS: {
-    TIGHT: 1.2,
-    NORMAL: 1.4,
-    RELAXED: 1.6,
-  },
 } as const;
 
 // Shadow Constants
@@ -91,19 +84,5 @@ export const SHADOWS = {
     shadowOpacity: 0.5,
     shadowRadius: 15,
     elevation: 8,
-  },
-} as const;
-
-// Animation Constants
-export const ANIMATIONS = {
-  DURATION: {
-    FAST: 200,
-    NORMAL: 300,
-    SLOW: 500,
-  },
-  EASING: {
-    EASE_IN: 'ease-in',
-    EASE_OUT: 'ease-out',
-    EASE_IN_OUT: 'ease-in-out',
   },
 } as const;
