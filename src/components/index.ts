@@ -1,7 +1,3 @@
 // Export all components from here
-// Example:
-// export { default as Button } from './Button';
-// export { default as Card } from './Card';
-
-// Placeholder for future components
-export {};
+export { default as BottomTabNavigator } from './BottomTabNavigator';
+export { default as CatProfileCard } from './CatProfileCard';
