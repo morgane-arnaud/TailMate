@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { Cat, VoteRequest, VoteResponse } from '@/types/cat.types';
+import { CAT_API_KEY } from '@env';
 
 // Create the API slice
 export const catApi = createApi({
@@ -7,10 +8,7 @@ export const catApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://api.thecatapi.com/v1/',
     prepareHeaders: (headers) => {
-      // Get API key from environment
-      const apiKey =
-        process.env.CAT_API_KEY ||
-        'live_ztJk72yxROyCkAL9qZIiR1qhLPEAQssytEdeCxuYC1GEB3zLDAn6aZ9iXQP4t5ni'; // TODO
+      const apiKey = CAT_API_KEY;
       headers.set('x-api-key', apiKey);
       return headers;
     },
@@ -39,10 +37,8 @@ export const catApi = createApi({
         method: 'POST',
         body: voteData,
       }),
-      invalidatesTags: ['Cat'],
     }),
   }),
 });
 
-// Export hooks for usage in functional components
 export const { useGetCatsQuery, useVoteForCatMutation } = catApi;
